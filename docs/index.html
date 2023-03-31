@@ -1,54 +1,205 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
+
 <head>
   <meta charset="UTF-8">
-  <title>沧州交通学院WIKI</title>
+  <title>沧州交通学院Wiki</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="description" content="Description">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <meta name="description" content="沧州交通学院Wiki旨在旨在帮助同学更好的了解校园的Wiki">
+  <meta name="keywords" content="沧州交通学院,沧州交通学院Wiki,北京交通大学海滨学院,Wiki,高校,沧州,黄骅,河北省">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="shortcut icon" type="image/x-icon" href="logo.png">
+  <link rel="stylesheet" href="./css/doc.css">
+  <link rel="stylesheet" href="./css/vue.css">
 </head>
+
 <body>
-  <div id="app">学校里有什么不懂的吗？这里可以帮到你。</div>
+  <div class="doc-header">
+    <div class="nav-left">
+      <a href="#">
+        <div class="logo-box">
+          <img src="./img/logo.png" title="logo" />
+          <h1 class="logo-text">沧州交通学院Wiki</h1>
+        </div>
+      </a>
+    </div>
+    <nav class="nav-right">
+      <div class="sear-box p-none" tabindex="-1">
+        <!-- 加载中…… -->
+      </div>
+      <div class="zk-box p-none">
+        <a class="wzi" href="javascript:;">
+          <!-- <span>背景 </span> -->
+          <img class="theme-btn" src="./icon/theme.svg">
+          <!-- <span class="zk-icon"></span> -->
+        </a>
+        <div class="zk-context theme-box">
+          <div>
+            <div style="height: 5px;"></div>
+            <span style="background-color: #FFFFFF;"></span>
+            <span style="background-color: #f5f5f5;"></span>
+            <span style="background-color: #F1FAFA;"></span>
+            <span style="background-color: #f5f5d5;"></span>
+            <span style="background-color: #d5f5f5;"></span>
+
+            <span style="background-color: #f5e5f5;"></span>
+            <span style="background-color: #E8E8FF;"></span>
+            <span style="background-color: #f0f9eb;"></span>
+            <span style="background-color: #ebe5dd;"></span>
+            <span style="background-color: #e8f4ff;"></span>
+          </div>
+        </div>
+      </div>
+      <a class="wzi" href="#">首页</a>
+      <!--a class="wzi" href="doc.html">文档</a-->
+      <!-- <a class="p-none wzi" href="#/more/blog">博客</a> -->
+      <a class="p-none wzi" href="#/more/sa-token-donate">赞助</a>
+    </nav>
+  </div>
+  <div class="main-box">
+    <div id="app">学校里有什么不懂的吗？这里可以帮到你。</div>
+  </div>
+  <!-- UI逐渐显现 -->
+  <style type="text/css">
+    body {
+      opacity: 0.01;
+      transition: opacity 0.5s;
+      background-color: #FFF;
+    }
+  </style>
+  <script type="text/javascript">
+    setTimeout(function () {
+      document.body.style.opacity = 1;
+    }, 1);
+  </script>
+
+  <!--  -->
   <script>
     window.$docsify = {
-      repo: 'YTSakura233/docsify',
+      repo: 'YTSakura233/docsify', // github地址 
+      // themeColor: '#06A3D7', // 主题颜色  
+      basePath: location.pathname.substr(0, location.pathname.lastIndexOf('/') + 1), // 自动计算项目名字 
+      // basePath: '/sa-token-doc/',		// 设置文件加载的父路径, 这在一些带项目名部署的文件中非常有效
+      auto2top: true, // 是否在切换页面后回到顶部 
+      // coverpage: true, // 开启封面 
+      subMaxLevel: 4, // 标题解析层级, 写几就在目录树中解析到几级标题 ,一般写2吧也就 
+      copyCode: { // 复制插件 
+        buttonText: '复制到剪贴板',
+        errorText: '错误',
+        successText: '复制成功'
+      },
     }
   </script>
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
+  <script src="./js/docsify.min.js"></script>
+  <script src="./js/docsify-copy-code.min.js"></script>
 
-<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
-<script>
-  window.$docsify = {
-    loadNavbar: true
-  }
-</script>
-<script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
-<style type="text/css">
-  .content {
-    overflow: auto;
-  }
-  </style>
-<script>
-  const gitalk = new Gitalk({
-    clientID: '7a52984e968e63b1acf2',
-    clientSecret: '534476844a238c89b1fb9a9fb92bc3fe9bb778dc',
-    repo: 'cjwiki-pinglun',
-    owner: 'YTSakura233',
-    admin: ['YTSakura233'],
-    // facebook-like distraction free mode
-    distractionFreeMode: false,
-    id: location.pathname,      // Ensure uniqueness and length less than 50
-  })
-</script>
-  <!-- Docsify v4 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <!-- 语言合集：https://cdn.jsdelivr.net/npm/prismjs@1/components/ -->
+  <script src="./js/prism-java.min.js"></script>
+  <script src="./js/prism-gradle.min.js"></script>
+  <script src="./js/prism-yaml.min.js"></script>
+  <script src="./js/prism-properties.min.js"></script>
+
+  <!-- 搜索框 -->
+  <script src="./js/search.min.js"></script>
+  <!-- 多 tab 切换 -->
+  <script src="./js/docsify-tabs.min.js"></script>
+  <!-- img点击放大 -->
+  <script src="./js/zoom-image.min.js"></script>
+
+  <!-- sidebar折叠 -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
+  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+
+  <!-- jqeury -->
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/layer.js"></script>
+
+  <!-- 搜索引擎自动提交 -->
+  <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+  </script>
+
+  <script type="text/javascript" src="https://cdn.wwads.cn/js/makemoney.js" async></script>
+  <!-- 百度统计 -->
+  <script>
+    var _hmt = _hmt || [];
+    (function () {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?35ad501304eae758ac6139a22a9830f5";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+  <!-- 修改背景颜色 -->
+  <script>
+
+    // 绑定修改背景色的按钮事件
+    $('.theme-box span').click(function () {
+      let bgColor = this.style.backgroundColor;
+      setBg(bgColor);
+      localStorage.setItem('bg-color-value', bgColor)
+    })
+    // 读取上次记录
+    let bgColor = localStorage.getItem('bg-color-value');
+    if (bgColor) {
+      setBg(bgColor);
+    }
+
+    // 设置背景颜色 
+    function setBg(bgColor) {
+      console.log('---- 背景颜色设定为：', bgColor);
+
+      // -------- 设置 body 背景
+      document.body.style.backgroundColor = bgColor;
+
+      // -------- 设置 header 头背景
+      // 如果是 16 进制，转 rgba
+      if (bgColor.indexOf('#') == 0) {
+        bgColor = hexToRgba(bgColor, 0.97);
+      }
+      // 如果是 rgb，转 rgba
+      else if (bgColor.match(/\,/g).length == 2) {
+        bgColor = bgColor.replace(')', ' ,0.97)');
+      }
+
+      document.querySelector('.doc-header').style.backgroundColor = bgColor;
+    }
+
+    // 16进制 转 rgba
+    function hexToRgba(str, a) {
+      a = a || 1;
+
+      var reg = /^#([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$/
+      if (!reg.test(str)) { return; }
+      let newStr = (str.toLowerCase()).replace(/\#/g, '')
+      let len = newStr.length;
+      if (len == 3) {
+        let t = ''
+        for (var i = 0; i < len; i++) {
+          t += newStr.slice(i, i + 1).concat(newStr.slice(i, i + 1))
+        }
+        newStr = t
+      }
+      let arr = []; //将字符串分隔，两个两个的分隔
+      for (var i = 0; i < 6; i = i + 2) {
+        let s = newStr.slice(i, i + 2)
+        arr.push(parseInt("0x" + s))
+      }
+      return 'rgb(' + arr.join(",") + ', ' + a + ')';
+    }
+
+  </script>
 </body>
+
 </html>
