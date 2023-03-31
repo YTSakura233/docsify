@@ -107,6 +107,21 @@
       },
     }
   </script>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
+
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+  <script>
+    const gitalk = new Gitalk({
+      clientID: '7a52984e968e63b1acf2',
+      clientSecret: '6c5ff1384d29a49948cfccd9c4ab91465704d7ec',
+      repo: 'docsify',
+      owner: 'YTSakura233',
+      admin: ['YTSakura233'],
+      // facebook-like distraction free mode
+      distractionFreeMode: false
+    })
+  </script>
   <script src="./js/docsify.min.js"></script>
   <script src="./js/docsify-copy-code.min.js"></script>
 
