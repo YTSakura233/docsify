@@ -1,4 +1,6 @@
-<img src="https://img.animemangafan.cn/i/2023/03/31/6426bb4e6060c.png#pic_center =150x150" alt="沧州交通学院校徽" style="zoom:10%;" />
+<p align="center" style="zoom:10%;">
+	<img alt="logo" src="https://img.animemangafan.cn/i/2023/03/31/6426bb4e6060c.png">
+</p>
 
 <h1 align="center" style="margin: 30px 0 30px; font-weight: bold;">沧州交通学院Wiki</h1>
 
