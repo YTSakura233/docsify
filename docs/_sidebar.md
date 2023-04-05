@@ -4,6 +4,7 @@
 	- [Wiki介绍](/)
 - **学校简介**
   - [历任校长](/intro/headmaster)
+  - [校内问询](/inrto/tel)
 - **其他**
   - [捐赠](/more/cj-wiki-donate)
 
